@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "jsx": "react-jsx",
+    "allowJs": false,
+    "checkJs": false,
+    "strict": true,
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@ui": ["./ui"],
+      "@ui/*": ["./ui/*"],
+
+      "@application": ["./application"],
+      "@application/*": ["./application/*"],
+    }
+  },
+  "include": ["src"]
+}

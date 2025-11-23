@@ -1,0 +1,12 @@
+export { default as Footer } from "./Footer/Footer";
+export { default as Header } from "./Header/Header";
+export { default as MobileMenu } from "./MobileMenu/MobileMenu";
+export { default as ProductsCardList } from "./ProductsCardList/ProductsCardList";
+export { default as ShortBlog } from "./ShortBlog/ShortBlog";
+export { default as Slider } from "./Slider/Slider";
+export { default as BlogList } from "./BlogList/BlogList";
+export { default as UserSettingsSidebar } from "./UserSettingsSidebar/UserSettingsSidebar";
+export { default as NewProducts } from "./NewProducts/NewProducts";
+export { default as PlantCare } from "./PlantCare/PlantCare";
+export { default as ProductsShortDescription } from "./ProductsShortDescription/ProductsShortDescription";
+export { default as AuthModal } from "./AuthModal/AuthModal";

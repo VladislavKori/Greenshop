@@ -1,0 +1,1 @@
+export { default as AccountDetailSettings } from "./detail/AccountDetailSettings";
