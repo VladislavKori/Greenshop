@@ -2,14 +2,14 @@ import React from 'react';
 
 import './style.css'
 
-import { ReactComponent as UserIcon } from '../../assets/sidebarsettings/user.svg';
-import { ReactComponent as AddressIcon } from '../../assets/sidebarsettings/location.svg';
-import { ReactComponent as OrdersIcon } from '../../assets/sidebarsettings/shopping.svg';
-import { ReactComponent as WishlistIcon } from '../../assets/sidebarsettings/heart.svg';
-import { ReactComponent as DownloadIcon } from '../../assets/sidebarsettings/download.svg';
-import { ReactComponent as SupportIcon } from '../../assets/sidebarsettings/support.svg';
-import { ReactComponent as ReportsIcon } from '../../assets/sidebarsettings/activity.svg';
-import { ReactComponent as LoguotIcon } from '../../assets/sidebarsettings/logout.svg'
+import UserIcon from '../../assets/sidebarsettings/user.svg?react';
+import AddressIcon from '../../assets/sidebarsettings/location.svg?react';
+import OrdersIcon from '../../assets/sidebarsettings/shopping.svg?react';
+import WishlistIcon from '../../assets/sidebarsettings/heart.svg?react';
+import DownloadIcon from '../../assets/sidebarsettings/download.svg?react';
+import SupportIcon from '../../assets/sidebarsettings/support.svg?react';
+import ReportsIcon from '../../assets/sidebarsettings/activity.svg?react';
+import LoguotIcon from '../../assets/sidebarsettings/logout.svg?react'
 
 function UserSettingsSidebar() {
   return (

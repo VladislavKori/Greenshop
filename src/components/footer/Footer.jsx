@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import './footer.css';
 
 // Icons
-import { ReactComponent as LogoIcon } from '../../assets/logo.svg';
+import LogoIcon from '../../assets/logo.svg?react';
 
 import {
   LocationIcon,

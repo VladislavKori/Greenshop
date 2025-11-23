@@ -6,8 +6,8 @@ import { Link } from 'react-scroll';
 import './productsPagination.css';
 
 // Images or Icons
-import { ReactComponent as ArrowRight } from '../../assets/productsCLIcons/ArrowRight.svg';
-import { ReactComponent as ArrowLeft } from '../../assets/productsCLIcons/ArrowLeft.svg';
+import ArrowRight from '../../assets/productsCLIcons/ArrowRight.svg?react';
+import ArrowLeft from '../../assets/productsCLIcons/ArrowLeft.svg?react';
 
 function ProductsPagination({ amountSlides, changeSlide, currentSlide }) {
   const pageNumbers = [];

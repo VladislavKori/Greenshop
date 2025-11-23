@@ -1,9 +1,9 @@
 // Libs
-import React, {useEffect, useRef, useState} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   BrowserRouter,
-  Switch,
-  Route
+  Route,
+  Routes
 } from 'react-router-dom';
 
 // Styles
@@ -28,22 +28,20 @@ import ScrollToTop from './hooks/ScrollToTop';
 
 function App() {
 
-  return(
-    <React.Fragment>
-    <Cookie />
-    <BrowserRouter basename={'/GreenShop-site/'}  >
+  return (
+    <BrowserRouter>
+      <Cookie />
       <ScrollToTop />
-      <Switch>
-        <Route exact path="/" component={MainPage}/>
-        <Route path="/product/:id" component={ProductPage}/>
-        <Route path="/basket" component={BusketPage} />
-        <Route path="/blog" component={BlogPage} />
-        <Route path="/shops" component={ShopsPage} />
-        <Route path="/plantcare" component={PlantCarePage} />
-        <Route path="/user/settings/accountdetail" component={AccountDetailSettings} />
-      </Switch>
+      <Routes>
+        <Route exact path="/" element={<MainPage />} />
+        <Route path="/product/:id" element={<ProductPage />} />
+        <Route path="/basket" element={<BusketPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/shops" element={<ShopsPage />} />
+        <Route path="/plantcare" element={<PlantCarePage />} />
+        <Route path="/user/settings/accountdetail" element={<AccountDetailSettings />} />
+      </Routes>
     </BrowserRouter>
-    </React.Fragment>
   )
 }
 export default App;

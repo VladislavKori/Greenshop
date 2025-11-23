@@ -2,7 +2,7 @@ import React, {useState, useRef, useEffect} from 'react';
 
 import './style.css'
 
-import {ReactComponent as Lupa} from '../../../assets/productsShortDescription/lupa.svg'
+import Lupa from '../../../assets/productsShortDescription/lupa.svg?react'
 
 import { product } from '../../../configuration/product.config.js';
 

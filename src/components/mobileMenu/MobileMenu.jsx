@@ -1,12 +1,11 @@
-import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./mobilemenu.css";
 
-import { ReactComponent as HomeIcon } from "../../assets/mobilemenu/home.svg";
-import { ReactComponent as HeartIcon } from "../../assets/mobilemenu/heart.svg";
-import { ReactComponent as MainIcon } from "../../assets/mobilemenu/main.svg";
-import { ReactComponent as BasketIcon } from "../../assets/mobilemenu/basket.svg";
-import { ReactComponent as UserIcon } from "../../assets/mobilemenu/user.svg";
+import HomeIcon from "../../assets/mobilemenu/home.svg?react";
+import HeartIcon from "../../assets/mobilemenu/heart.svg?react";
+import MainIcon from "../../assets/mobilemenu/main.svg?react";
+import BasketIcon from "../../assets/mobilemenu/basket.svg?react";
+import UserIcon from "../../assets/mobilemenu/user.svg?react";
 
 function MobileMenu() {
   return (

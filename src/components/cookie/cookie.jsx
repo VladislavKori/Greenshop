@@ -3,7 +3,7 @@ import {motion} from 'framer-motion'
 
 import './cookie.css'
 
-import { ReactComponent as CookieIcon } from '../../assets/cookies/cookie.svg'
+import CookieIcon from '../../assets/cookies/cookie.svg?react'
 import { useRef } from 'react'
 
 function cookie() {

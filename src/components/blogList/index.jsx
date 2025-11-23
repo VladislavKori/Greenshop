@@ -13,7 +13,7 @@ import {
   PreviewImg4,
 } from '../../assets/shortblog/imports';
 
-import { ReactComponent as ArrowDown } from '../../assets/blog/ArrowDown.svg';
+import ArrowDown from '../../assets/blog/ArrowDown.svg?react';
 
 function BlogList() {
   return (

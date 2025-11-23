@@ -10,11 +10,11 @@ import {AuthModal} from '../imports'
 import './header.css';
 
 // Icons
-import { ReactComponent as LogoIcon } from '../../assets/logo.svg';
-import { ReactComponent as SearchIcon } from '../../assets/header-icons/search.svg';
-import { ReactComponent as FilterIcon } from '../../assets/header-icons/filter.svg';
-import { ReactComponent as LogoutIcon } from '../../assets/header-icons/logout.svg';
-import { ReactComponent as BusketIcon } from '../../assets/header-icons/busket.svg';
+import LogoIcon from '../../assets/logo.svg?react';
+import SearchIcon from '../../assets/header-icons/search.svg?react';
+import FilterIcon from '../../assets/header-icons/filter.svg?react';
+import LogoutIcon from '../../assets/header-icons/logout.svg?react';
+import BusketIcon from '../../assets/header-icons/busket.svg?react';
 
 function Header() {
 

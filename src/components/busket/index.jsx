@@ -7,10 +7,10 @@ import CartTotals from './cartTotals/index';
 import './style.css'
 
 // img
-import productImg from '../../assets/productsCLImage/product1.png'
-import { ReactComponent as MinusIcon } from '../../assets/busket/minus.svg';
-import { ReactComponent as PlusIcon } from '../../assets/busket/plus.svg';
-import { ReactComponent as DeleteIcon } from '../../assets/busket/Delete.svg'
+import productImg from '../../assets/productsCLImage/product1.png?react'
+import MinusIcon from '../../assets/busket/minus.svg?react';
+import PlusIcon from '../../assets/busket/plus.svg?react';
+import DeleteIcon from '../../assets/busket/Delete.svg?react'
 
 function Busket({propStyle}) {
 

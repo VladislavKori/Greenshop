@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom'
 import './productsCard.css'
 
 // Images or Icons
-import { ReactComponent as BasketIcon } from '../../assets/productsCLIcons/basket.svg'
-import { ReactComponent as LikeIcon } from '../../assets/productsCLIcons/like.svg'
-import { ReactComponent as SearchIcon } from '../../assets/productsCLIcons/search.svg'
+import BasketIcon from '../../assets/productsCLIcons/basket.svg?react'
+import LikeIcon from '../../assets/productsCLIcons/like.svg?react'
+import SearchIcon from '../../assets/productsCLIcons/search.svg?react'
 
 function ProductsCard(props) {
 

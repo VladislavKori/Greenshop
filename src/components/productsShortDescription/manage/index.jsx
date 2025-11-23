@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 
 import stars from '../../../assets/productsShortDescription/stars.png'
-import { ReactComponent as Like } from '../../../assets/productsShortDescription/like.svg';
+import Like from '../../../assets/productsShortDescription/like.svg?react';
 
-import { ReactComponent as Plus } from '../../../assets/productsShortDescription/plus.svg';
-import { ReactComponent as Minus } from '../../../assets/productsShortDescription/minus.svg';
+import Plus from '../../../assets/productsShortDescription/plus.svg?react';
+import Minus from '../../../assets/productsShortDescription/minus.svg?react';
 
 import facebook from '../../../assets/productsShortDescription/Facebook.png';
 import linkedin from '../../../assets/productsShortDescription/Linkedin.png';
