@@ -1,29 +1,12 @@
-import 'leaflet/dist/leaflet.css';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { motion } from "framer-motion"
-import L from 'leaflet'
+import styles from './style.module.scss'
+import { CSSProperties, FC } from 'react';
 
-import './style.css'
+export const Map: FC = () => {
 
-import {shops} from '@ui/configuration/shops.config.js';
-
-import icon from 'leaflet/dist/images/marker-icon.png';
-import iconShadow from 'leaflet/dist/images/marker-shadow.png';
-import { CSSProperties } from 'react';
-
-let DefaultIcon = L.icon({
-    iconUrl: icon,
-    shadowUrl: iconShadow
-});
-
-L.Marker.prototype.options.icon = DefaultIcon;
-
-function Map({style}: { style: CSSProperties }) {
-
-  return(
+  return (
     <motion.div
-      className="map"
-      style={style}
+      className={styles["map"]}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{
@@ -32,21 +15,12 @@ function Map({style}: { style: CSSProperties }) {
         damping: 20
       }}
     >
-      <MapContainer center={[60, 57]} zoom={4} scrollWheelZoom={true} style={{width: '100%', height: '100%'}}>
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        {shops.map(item => (
-          <Marker position={{ lat: item.position[0], lng: item.position[1] }}>
-            <Popup>
-              {item.address}
-            </Popup>
-          </Marker>
-        ))}
-      </MapContainer>
+      <iframe 
+        src="https://yandex.com/map-widget/v1/?um=constructor%3Af643c61496e7ee349811791289b633cf86c7fcd44d55de73c0ec0ed50d21c12e&amp;source=constructor" 
+        width="100%" 
+        height="100%" 
+        frameBorder="0"
+      ></iframe>
     </motion.div>
   )
 }
-
-export default Map;
