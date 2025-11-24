@@ -9,3 +9,4 @@ export { default as LoginModal } from "../molecules/LoginModal/LoginModal";
 export { default as RegisterModal } from "../molecules/RegisterModal/RegisterModal";
 export { default as AccountDetail } from "./AccountDetail/AccountDetail";
 export { default as Busket } from "./Busket/Busket";
+export * from "./BlogCard";

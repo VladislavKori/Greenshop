@@ -1,73 +1,43 @@
-import './style.css'
-import {
-  ArrowRightIcon,
-  PreviewImg1,
-  PreviewImg2,
-  PreviewImg3,
-  PreviewImg4,
-} from '@ui/assets/shortblog/imports';
+import { FC } from 'react';
+import { BlogCard } from '@ui/components/molecules';
+import styles from "./style.module.scss";
+import ArrowDownIcon from '@ui/assets/icons/arrow-down.svg?react';
+import { BlogListMockData } from './BlogList.mock';
 
-import ArrowDown from '@ui/assets/blog/ArrowDown.svg?react';
-
-function BlogList() {
+export const BlogList: FC = () => {
   return (
-    <div className="bloglist">
-      <h1 className="bloglist__title">Our Blog Posts</h1>
+    <div className={styles["blog"]}>
+      <h2 className={styles["blog-title"]}>Our Blog Posts</h2>
 
-      <div className="bloglist__list-title">
-        <p className="bloglist__list-title-text">Most Popular</p>
+      <span className={styles["blog-list-title"]}>
+        Most Popular
+      </span>
+
+      <div className={styles["blog-list"]}>
+        {BlogListMockData.slice(0, 2).map(post => (
+          <BlogCard {...post} type="row" />
+        ))}
       </div>
 
-      <ul className="bloglist__list">
+      <button className={styles["blog-more"]}>
+        See More <ArrowDownIcon />
+      </button>
 
-        <li className="bloglist__item">
-          <div className="bloglist__preview">
-            <img src={PreviewImg1} alt="post-preview" />
-          </div>
-          <div className="bloglist__post-info">
-            <p className="bloglist__post-timeinfo">September 12 I Read in 6 minutes</p>
-            <h1 className="bloglist__post-title">Cactus & Succulent Care Tips</h1>
-            <p className="bloglist__post-description">Cacti are succulents are easy care plants for any home or patio.Cacti are succulents are easy care plants for any home or patio.Cacti are succulents are easy care plants for any home or patio.Cacti are succulents are easy care plants for any home or patio.</p>
-            <a className="bloglist__post-read">
-              Read Post
-            </a>
-          </div>
-        </li>
+      <span className={styles["blog-list-title"]}>
+        All Posts
+      </span>
 
-      </ul>
+      <div className={styles["blog-list"]}>
+        {BlogListMockData.map(post => (
+          <BlogCard {...post} type="row" />
+        ))}
 
-      <div className="bloglist__more">
-        <p className="bloglist__more-text">See More <ArrowDown /> </p>
       </div>
 
-      <div className="bloglist__list-title">
-        <p className="bloglist__list-title-text">All Posts</p>
-      </div>
-
-      <ul className="bloglist__list">
-
-        <li className="bloglist__item">
-          <div className="bloglist__preview">
-            <img src={PreviewImg1} alt="post-preview" />
-          </div>
-          <div className="bloglist__post-info">
-            <p className="bloglist__post-timeinfo">September 12 I Read in 6 minutes</p>
-            <h1 className="bloglist__post-title">Cactus & Succulent Care Tips</h1>
-            <p className="bloglist__post-description">Cacti are succulents are easy care plants for any home or patio.Cacti are succulents are easy care plants for any home or patio.Cacti are succulents are easy care plants for any home or patio.Cacti are succulents are easy care plants for any home or patio.</p>
-            <a className="bloglist__post-read">
-              Read Post
-            </a>
-          </div>
-        </li>
-
-      </ul>
-
-      <div className="bloglist__more">
-        <p className="bloglist__more-text">See More <ArrowDown /> </p>
-      </div>
+      <button className={styles["blog-more"]}>
+        See More <ArrowDownIcon />
+      </button>
 
     </div>
   )
 }
-
-export default BlogList;

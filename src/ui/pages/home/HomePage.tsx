@@ -4,7 +4,7 @@ import {
   Slider,
   ProductsCardList,
   NewProducts,
-  ShortBlog,
+  MiniBlog,
 } from '@ui/components/organisms';
 
 function HomePage() {
@@ -26,7 +26,7 @@ function HomePage() {
     </div>
 
     <NewProducts style={{ margin: '100px 0' }} />
-    <ShortBlog style={{ marginBottom: '100px' }} />
+    <MiniBlog />
   </>);
 }
 

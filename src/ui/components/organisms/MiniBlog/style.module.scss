@@ -1,0 +1,37 @@
+.blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin: 100px 0;
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &-title {
+    font-family: var(--font-family-primary);
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    color: #3d3d3d;
+  }
+
+  &-subtitle {
+    font-family: var(--font-family-primary);
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #727272;
+  }
+
+  &-list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+}

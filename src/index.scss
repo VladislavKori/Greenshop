@@ -1,4 +1,8 @@
-* {margin: 0; padding: 0; box-sizing: border-box;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 @font-face {
   font-family: "CeraPro";
@@ -32,5 +36,7 @@
 
 /* Нужно поменять шривт Cera Pro */
 :root {
-    --font-family-ceraPro: "CeraPro";
+  --font-family-base: "CeraPro";
+  --font-family-primary: "Roboto";
+  --color-primary: #46a358;
 }
