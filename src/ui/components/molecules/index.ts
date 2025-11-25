@@ -1,6 +1,6 @@
 export { Map } from "./Map/Map";
 export { default as ProductCard } from "../atoms/ProductsCard/ProductsCard";
-export { default as OrderInfo } from "./OrderInfo/OrderInfo";
+export { OrderInfo } from "./OrderInfo/OrderInfo";
 export { default as PlantCareItem } from "./PlantCareItem/PlantCareItem";
 export { default as ProductDetail } from "./ProductDetail/ProductDetail";
 export { default as OrderModal } from "./OrderModal/OrderModal";

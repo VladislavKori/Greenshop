@@ -1,0 +1,35 @@
+.variant {
+    &-h1 {
+        font-family: var(--font-family-primary);
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    &-h2 {
+        font-family: var(--font-family-primary);
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    &-body {
+        font-family: var(--font-family-primary);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+.color {
+    &-black {
+        color: #3D3D3D;
+    }
+
+    &-gray {
+        color: #727272;
+    }
+
+    &-primary {
+        color: var(--color-primary)
+    }
+}

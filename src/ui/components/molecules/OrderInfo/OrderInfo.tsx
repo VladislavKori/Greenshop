@@ -1,14 +1,18 @@
-import { CSSProperties } from 'react';
-import './style.css'
+import type { FC } from 'react';
+import styles from './style.module.scss';
+import { Typography } from '@ui/components/atoms';
+import { orderInfoMockData } from './OrderInfo.mock';
 
-function OrderInfo({ style }: { style: CSSProperties }) {
+export const OrderInfo: FC = () => {
   return (
-    <div className="orderInfo" style={style} >
-      <h1 className="orderInfo__title">Order</h1>
-      <p className="orderInfo__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      <p className="orderInfo__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    </div>
+    <article className={styles["order"]}>
+      <Typography variant="h1">Заказ</Typography>
+
+      {orderInfoMockData.map((str, index) => (
+        <Typography key={index} color='gray' variant="body">
+          {str}
+        </Typography>
+      ))}
+    </article>
   )
 }
-
-export default OrderInfo;
