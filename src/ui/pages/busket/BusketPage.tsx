@@ -1,4 +1,4 @@
-import { Breadcrumbs } from '@ui/components/atoms';
+import { Breadcrumbs } from '@ui/components/molecules';
 import { Busket } from '@ui/components/molecules';
 import ProductSlider from '@ui/components/molecules/ProductSlider/ProductSlider';
 
@@ -6,7 +6,7 @@ function BusketPage() {
   return (<>
     <Breadcrumbs items={['Shop', 'Shopping Cart']} />
     <Busket />
-    <ProductSlider styles={{ margin: "50px 0" }} title="You may be interested in" />
+    <ProductSlider style={{ margin: "50px 0" }} title="You may be interested in" />
   </>)
 }
 

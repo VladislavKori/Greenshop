@@ -1,4 +1,4 @@
-import { Breadcrumbs } from '@ui/components/atoms';
+import { Breadcrumbs } from '@ui/components/molecules';
 import { ProductDetail } from '@ui/components/molecules';
 import ProductSlider from '@ui/components/molecules/ProductSlider/ProductSlider';
 import {

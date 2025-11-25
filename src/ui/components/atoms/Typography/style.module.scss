@@ -33,3 +33,26 @@
         color: var(--color-primary)
     }
 }
+
+.style {
+  &-normal {
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  &-italic {
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  &-bold {
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  &-boldItalic {
+    font-weight: 700;
+    font-style: italic;
+  }
+}
+

@@ -1,16 +1,17 @@
 import { Outlet } from 'react-router-dom';
 import { Header, Footer, MobileMenu } from '@ui/components/organisms';
+import styles from "./style.module.scss";
+import { FC } from 'react';
 
-function DefaultLayout() {
-    
+export const DefaultLayout: FC = () => {
   return (
-    <div className="wrapper">
+    <div className={styles["layout"]}>
       <Header />
-      <Outlet />
+      <div className={styles["layout-content"]}>
+        <Outlet />
+      </div>
       <Footer />
       <MobileMenu />
     </div>
   );
 }
-
-export default DefaultLayout;

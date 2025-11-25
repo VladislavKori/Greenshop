@@ -1,4 +1,4 @@
-import { Breadcrumbs } from '@ui/components/atoms';
+import { Breadcrumbs } from '@ui/components/molecules';
 import { BlogList } from '@ui/components/organisms';
 import { FC } from 'react';
 

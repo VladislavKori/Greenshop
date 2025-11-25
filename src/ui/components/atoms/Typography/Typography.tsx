@@ -8,14 +8,16 @@ export const Typography: FC<TypographyProps> = (props) => {
         children, 
         className, 
         variant = "body", 
-        color = "black" 
+        color = "black",
+        fontStyle = "normal"
     } = props;
 
     return (
         <p className={clsx(
             className,
             styles[`variant-${variant}`],
-            styles[`color-${color}`]
+            styles[`color-${color}`],
+            styles[`style-${fontStyle}`]
         )}>
             {children}
         </p>

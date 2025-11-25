@@ -1,7 +1,6 @@
 export { default as Modal } from "./Modal/Modal";
 export { default as Search } from "./Search/Search";
 export { default as InputSettings } from "./InputSettings/InputSettings";
-export { default as Breadcrumbs } from "./Breadcrumbs/Breadcrumbs";
 export { default as ProductDescription } from "./ProductDescription/ProductDescription";
 export { default as ProductCard } from "./ProductsCard/ProductsCard";
 export { default as ProductsListSorting } from "./ProductsListSorting/ProductsListSorting";

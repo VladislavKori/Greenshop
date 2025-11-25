@@ -10,3 +10,4 @@ export { default as RegisterModal } from "../molecules/RegisterModal/RegisterMod
 export { default as AccountDetail } from "./AccountDetail/AccountDetail";
 export { default as Busket } from "./Busket/Busket";
 export * from "./BlogCard";
+export { Breadcrumbs } from "../molecules/Breadcrumbs/Breadcrumbs";

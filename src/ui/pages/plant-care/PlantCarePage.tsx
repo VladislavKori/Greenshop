@@ -1,4 +1,4 @@
-import { Breadcrumbs } from '@ui/components/atoms';
+import { Breadcrumbs } from '@ui/components/molecules';
 import { PlantCare } from '@ui/components/organisms';
 
 function PlantCarePage() {

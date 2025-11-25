@@ -1,4 +1,4 @@
-import { Breadcrumbs } from "@ui/components/atoms";
+import { Breadcrumbs } from "@ui/components/molecules";
 import { Map, OrderInfo } from "@ui/components/molecules";
 import { FC } from "react";
 
