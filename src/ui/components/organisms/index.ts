@@ -7,6 +7,6 @@ export { default as Slider } from "./Slider/Slider";
 export { BlogList } from "./BlogList/BlogList";
 export { default as UserSettingsSidebar } from "./UserSettingsSidebar/UserSettingsSidebar";
 export { default as NewProducts } from "./NewProducts/NewProducts";
-export { default as PlantCare } from "./PlantCare/PlantCare";
+export { PlantCareList } from "./PlantCareList/PlantCareList";
 export { default as ProductsShortDescription } from "./ProductsShortDescription/ProductsShortDescription";
 export { default as AuthModal } from "./AuthModal/AuthModal";

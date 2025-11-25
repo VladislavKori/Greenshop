@@ -1,40 +1,38 @@
 import {motion} from 'framer-motion'
+import type { FC } from 'react';
+import type { PlantCareItemProps } from './PlantCareItem.types';
+import { Typography } from '@ui/components/atoms';
+import styles from "./style.module.scss";
 
-interface IPlantCareItemProps {
-    lessonNum: number;
-    videoUrl: string;
-    description: string;
-}
-
-function PlantCareItem(props: IPlantCareItemProps) {
+export const PlantCareItem: FC<PlantCareItemProps> = (props) => {
     const {lessonNum, videoUrl, description} = props;
     
     return (
         <motion.li 
-            className="plantcare__item"
+            className={styles["item"]}
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{
-                type: "spring",
-                stiffness: 260,
-                damping: 20
-            }}
+            transition={{ type: "spring", stiffness: 260, damping: 20 }}
         >
-            <h1 className="plantcare__title">Lesson {lessonNum}</h1>
-            <div className="plantcare__video">
+            <Typography variant="h1" color="black" fontStyle="bold">
+                Lesson {lessonNum}
+            </Typography>
+
+            <div className={styles["item-video"]}>
                 <iframe
-                    width={'100%'}
-                    height={'100%'}
+                    width="100%"
+                    height="100%"
                     src={videoUrl}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                    title="Embedded youtube"
+                    title={`Lesson ${lessonNum}`}
                 />
             </div>
-            <p className="plantcare__text">{description}</p>
+
+            <Typography variant="body" color="gray">
+                {description}
+            </Typography>
         </motion.li>
     )
 }
-
-export default PlantCareItem
