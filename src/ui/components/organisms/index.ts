@@ -9,4 +9,4 @@ export { default as UserSettingsSidebar } from "./UserSettingsSidebar/UserSettin
 export { default as NewProducts } from "./NewProducts/NewProducts";
 export { PlantCareList } from "./PlantCareList/PlantCareList";
 export { default as ProductsShortDescription } from "./ProductsShortDescription/ProductsShortDescription";
-export { default as AuthModal } from "./AuthModal/AuthModal";
+export { AuthModal } from "./AuthModal/AuthModal";

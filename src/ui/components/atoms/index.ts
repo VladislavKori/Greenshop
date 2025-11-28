@@ -1,4 +1,4 @@
-export { default as Modal } from "./Modal/Modal";
+export { Modal } from "./Modal/Modal";
 export { default as Search } from "./Search/Search";
 export { default as InputSettings } from "./InputSettings/InputSettings";
 export { default as ProductDescription } from "./ProductDescription/ProductDescription";
@@ -9,4 +9,5 @@ export { default as ProductsPriceRange } from "./ProductsPriceRange/ProductsPric
 export { default as Manage } from "./Manage/Manage";
 export { default as Previewer } from "./Previewer/Previewer";
 export { default as CartTotals } from "./CartTotals/CartTotals";
-export * from "./Typography/Typography"
+export * from "./Typography/Typography";
+export { ModalHeader } from "./ModalHeader/ModalHeader";

@@ -6,8 +6,9 @@ import SearchIcon from '@ui/assets/header-icons/search.svg?react';
 import FilterIcon from '@ui/assets/header-icons/filter.svg?react';
 import LogoutIcon from '@ui/assets/header-icons/logout.svg?react';
 import BusketIcon from '@ui/assets/header-icons/busket.svg?react';
-import AuthModal from '../AuthModal/AuthModal';
 import clsx from 'clsx';
+import { useDispatch } from 'react-redux';
+import { changeModalState } from '@application/state/authModalSlice';
 
 const headerLinks = [
   { id: "1", label: "Home", path: "/" },
@@ -17,14 +18,10 @@ const headerLinks = [
 ]
 
 function Header() {
-  const [authIsOpen, setAuthIsOpen] = useState(false);
+  const dispatch = useDispatch();
 
   return (
     <>
-      {authIsOpen ?
-        (<AuthModal onClose={() => setAuthIsOpen(false)} />)
-        :
-        null}
       <header className="header">
         <div className="header__logo logo">
           <NavLink className="logo__link" to={'/'}>
@@ -79,7 +76,7 @@ function Header() {
               <button
                 className="header__login-btn header__user-btn"
                 type="button"
-                onClick={() => { setAuthIsOpen(true) }}
+                onClick={() => dispatch(changeModalState("login"))}
               >
                 <LogoutIcon
                   className="header__login-btn_icon"

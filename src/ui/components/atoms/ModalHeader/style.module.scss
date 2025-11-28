@@ -1,0 +1,10 @@
+.head {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    
+    &-icon {
+        width: 18px;
+        height: 18px;
+    }
+}

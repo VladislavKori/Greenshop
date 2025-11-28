@@ -1,41 +1,54 @@
-import {createPortal} from 'react-dom'
-import {motion} from 'framer-motion'
-import { ReactNode } from 'react';
+import { createPortal } from 'react-dom'
+import { AnimatePresence, motion } from 'framer-motion'
+import { FC } from 'react';
+import { ModalProps } from './Modal.types';
+import styles from "./style.module.scss";
+import clsx from 'clsx';
 
-const modalRoot = document.querySelector('#modal-root');
+const modalRoot = document.querySelector<HTMLDivElement>('#modal-root')!;
 
-const container = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-  }
-};
+export const Modal: FC<ModalProps> = (props) => {
+  const { 
+    isOpen, 
+    onClose, 
+    children, 
+    maxWidth,
+    fullScreen
+  } = props;
 
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1
-  }
-};
+  return createPortal((
+    <AnimatePresence mode="wait">
+      {isOpen && (
+        <div className={styles["modal-wrapper"]}>
+          <motion.div
+            onClick={onClose}
+            className={styles["modal-overlay"]}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          />
 
-interface IModalProps {
-  children: ReactNode
+          <div
+            className={clsx(styles["modal-container"], {
+              [styles["modal-container-full-screen"]]: fullScreen,
+            })}
+            style={{ maxWidth: maxWidth }}
+            onClick={onClose}
+          >
+            <motion.div
+              className={clsx(styles["modal-content"], {
+                [styles["modal-container-full-screen"]]: fullScreen,
+              })}
+              onClick={(e) => e.stopPropagation()}
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 50, opacity: 0 }}
+            >
+              {children}
+            </motion.div>
+          </div>
+        </div>
+      )}
+    </AnimatePresence>
+  ), modalRoot)
 }
-
-function Modal({children}: IModalProps) {
-  return createPortal( (
-    <motion.div
-      className="modal__bg-blur"
-      variants={container}
-      initial="hidden"
-      animate="visible"
-    >
-      <motion.div className='modal' variants={item}>
-        {children}
-      </motion.div>
-    </motion.div>
-  ), modalRoot!)
-}
-
-export default Modal

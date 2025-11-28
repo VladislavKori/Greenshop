@@ -1,10 +1,14 @@
-import { createStore, combineReducers } from "redux";
-import {ModalReducer} from './state/ModalReducer'
+import { TypedUseSelectorHook, useSelector } from "react-redux";
+import { authModalReducer } from "./state/authModalSlice";
+import { configureStore } from "@reduxjs/toolkit";
 
-const rootReducer = combineReducers({
-  ModalReducer
+export const store = configureStore({
+  reducer: {
+    authModals:  authModalReducer
+  }
 })
 
-const store = createStore(rootReducer)
-
-export default store;
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch
+export type AppStore = typeof store
