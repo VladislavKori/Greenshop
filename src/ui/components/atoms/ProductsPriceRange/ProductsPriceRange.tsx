@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { Range, getTrackBackground } from 'react-range';
-import './productsPriceRange.css';
+import styles from "./style.module.scss";
+import { Typography } from '../Typography/Typography';
 
-function ProductsPriceRange() {
+export const ProductsPriceRange: FC = () => {
   const [values, setValues] = useState([25, 75]);
 
   const min = 0;
@@ -10,8 +11,7 @@ function ProductsPriceRange() {
   const step = 1;
 
   return (
-    <div className="productsPriceRange">
-      <h1 className="productsLF__filter-title">Price Range</h1>
+    <div className={styles["price"]}>
       <Range
         draggableTrack
         step={step}
@@ -68,21 +68,12 @@ function ProductsPriceRange() {
         )}
       />
 
-      <span className="productsPR__price-num">
-        Price
-{' '}
-        <span className="productsPR__nums">
-          $ 
-{' '}
-{values[0]}
-          -$
-          {values[1]}
-        </span>
-      </span>
-
-      <button className="productsPR__btn" type="button">
-        Filter
-      </button>
+      <Typography className={styles["range-price"]} variant='p' color="black">
+        Price:
+        <Typography variant='p' color='primary' fontStyle='bold'>
+          {`$${values[0]} - ${values[1]}`}
+        </Typography>
+      </Typography>
     </div>
   );
 }

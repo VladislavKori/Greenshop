@@ -1,7 +1,7 @@
 export { default as Footer } from "./Footer/Footer";
 export { default as Header } from "./Header/Header";
 export { default as MobileMenu } from "./MobileMenu/MobileMenu";
-export { default as ProductsCardList } from "./ProductsCardList/ProductsCardList";
+export { ProductsCardList } from "./ProductsCardList/ProductsCardList";
 export { MiniBlog } from "./MiniBlog/MiniBlog";
 export { default as Slider } from "./Slider/Slider";
 export { BlogList } from "./BlogList/BlogList";

@@ -1,9 +1,9 @@
-import { Fragment, useState } from 'react';
-import './productsCardList.css';
+import { FC, Fragment, useState } from 'react';
 import { productsList } from '@ui/configuration/withoutApi';
 import { ProductCard, ProductsPagination } from '@ui/components/atoms';
+import styles from "./style.module.scss";
 
-function ProductsCardList() {
+export const ProductsCardList: FC = () => {
   const [currentSlde, setCurrentSlide] = useState(1);
 
   const amountCard = productsList.length;
@@ -19,8 +19,8 @@ function ProductsCardList() {
   const cardsOnThisSlide = productsList.slice(firstCard, lastCard);
 
   return (
-    <div className="productsList">
-      <ul className="productsCL">
+    <div className={styles["list"]}>
+      <ul className={styles["list-grid"]}>
         {cardsOnThisSlide.map((item) => (
           <Fragment key={item.id}>
             <ProductCard {...item} />
@@ -37,5 +37,3 @@ function ProductsCardList() {
     </div>
   );
 }
-
-export default ProductsCardList;

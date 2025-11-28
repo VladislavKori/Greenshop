@@ -6,20 +6,17 @@ import {
   NewProducts,
   MiniBlog,
 } from '@ui/components/organisms';
+import styles from "./style.module.scss";
 
 function HomePage() {
   return (<>
     <Slider style={{ marginTop: '20px', marginBottom: '40px' }} />
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        columnGap: '50px',
-      }}
-    >
-      <ProductsListFilter />
+    <div className={styles["page-products"]}>
+      <aside className={styles["page-sidebar"]}>
+        <ProductsListFilter />
+      </aside>
 
-      <div style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+      <div className={styles["page-products-list"]}>
         <ProductsListSorting />
         <ProductsCardList />
       </div>

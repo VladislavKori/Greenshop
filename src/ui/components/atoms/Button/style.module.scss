@@ -1,0 +1,25 @@
+.button {
+    background: #46A358;
+    border-radius: 6px;
+    font-family: var(--font-family-ceraPro);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    border: none;
+    padding: 5px 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+    width: max-content;
+
+    &:hover {
+        background: #296935;
+    }
+
+    &:active {
+        color: #c5c5c5;
+        background: #1d4b25;
+    }
+}

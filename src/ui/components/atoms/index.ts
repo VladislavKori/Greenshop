@@ -11,3 +11,4 @@ export { default as Previewer } from "./Previewer/Previewer";
 export { default as CartTotals } from "./CartTotals/CartTotals";
 export * from "./Typography/Typography";
 export { ModalHeader } from "./ModalHeader/ModalHeader";
+export { Button } from "./Button/Button";

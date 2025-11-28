@@ -1,37 +1,51 @@
 .variant {
-    &-h1 {
-        font-family: var(--font-family-primary);
-        font-weight: 700;
-        font-size: 30px;
-    }
+  &-h1 {
+    font-family: var(--font-family-primary);
+    font-weight: 700;
+    font-size: 30px;
+  }
 
-    &-h2 {
-        font-family: var(--font-family-primary);
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 26px;
-    }
+  &-h2 {
+    font-family: var(--font-family-primary);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+  }
 
-    &-body {
-        font-family: var(--font-family-primary);
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 22px;
-    }
+  &-h3 {
+    font-family: var(--font-family-primary);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 16px;
+  }
+
+  &-p {
+    font-family: var(--font-family-primary);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  &-body {
+    font-family: var(--font-family-primary);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 .color {
-    &-black {
-        color: #3D3D3D;
-    }
+  &-black {
+    color: #3D3D3D;
+  }
 
-    &-gray {
-        color: #727272;
-    }
+  &-gray {
+    color: #727272;
+  }
 
-    &-primary {
-        color: var(--color-primary)
-    }
+  &-primary {
+    color: var(--color-primary)
+  }
 }
 
 .style {
@@ -55,4 +69,3 @@
     font-style: italic;
   }
 }
-

@@ -13,12 +13,4 @@ export const filterConfig = {
       { name: 'Accessories', quantity: '18', path: 'accessories' },
     ],
   },
-  size: {
-    name: 'Size',
-    points: [
-      { name: 'Small', quantity: '119', path: 'small' },
-      { name: 'Medium', quantity: '86', path: 'medium' },
-      { name: 'Large', quantity: '78', path: 'large' },
-    ],
-  },
 };

@@ -4,7 +4,7 @@ export { OrderInfo } from "./OrderInfo/OrderInfo";
 export { PlantCareItem } from "./PlantCareItem/PlantCareItem";
 export { default as ProductDetail } from "./ProductDetail/ProductDetail";
 export { default as OrderModal } from "./OrderModal/OrderModal";
-export { default as ProductsListFilter } from "./ProductsListFilter/ProductsListFilter";
+export { ProductsListFilter } from "./ProductsListFilter/ProductsListFilter";
 export { LoginForm } from "./LoginForm/LoginForm";
 export { RegisterForm } from "./RegisterForm/RegisterForm";
 export { default as AccountDetail } from "./AccountDetail/AccountDetail";

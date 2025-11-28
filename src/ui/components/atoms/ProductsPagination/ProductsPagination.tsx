@@ -1,20 +1,19 @@
 import { Link } from 'react-scroll';
-import './productsPagination.css';
 import ArrowRight from '@ui/assets/productsCLIcons/ArrowRight.svg?react';
 import ArrowLeft from '@ui/assets/productsCLIcons/ArrowLeft.svg?react';
-
-interface IProductsPaginationProps {
-  amountSlides: number;
-  changeSlide: (value: number) => void;
-  currentSlide: number;
-}
+import { FC } from 'react';
+import { IProductsPaginationProps } from './ProductsPagination.types';
+import styles from "./style.module.scss";
+import clsx from 'clsx';
 
 interface IPageNumberItem {
   pageNum: number;
   currentSlide: boolean;
 }
 
-function ProductsPagination({ amountSlides, changeSlide, currentSlide }: IProductsPaginationProps) {
+export const ProductsPagination: FC<IProductsPaginationProps> = (props) => {
+  const { amountSlides, changeSlide, currentSlide } = props;
+
   const pageNumbers: IPageNumberItem[] = [];
   const paginationLimit = 5;
   let currentSlideIndex = 0;
@@ -37,14 +36,15 @@ function ProductsPagination({ amountSlides, changeSlide, currentSlide }: IProduc
   });
 
   return (
-    <ul className="productsPagination">
+    <ul className={styles["pagination"]}>
       {currentSlideIndex !== pageNumbers[0].pageNum - 1 ? (
         <Link
-          className="productsPagination__item"
+          className={styles["pagination-item"]}
           onClick={() => {
             changeSlide(currentSlide - 1);
           }}
           duration={1000}
+          offset={-100}
           smooth="easeInOutQuint"
           to="productsCL-container"
         >
@@ -56,7 +56,10 @@ function ProductsPagination({ amountSlides, changeSlide, currentSlide }: IProduc
         if (item.currentSlide === true) {
           return (
             <li
-              className="productsPagination__item productsPagination__item_active"
+              className={clsx(
+                styles["pagination-item"],
+                styles["active"]
+              )}
               key={index}
             >
               {item.pageNum}
@@ -65,11 +68,12 @@ function ProductsPagination({ amountSlides, changeSlide, currentSlide }: IProduc
         }
         return (
           <Link
-            className="productsPagination__item"
+            className={styles["pagination-item"]}
             key={index}
             onClick={() => changeSlide(item.pageNum)}
             duration={1000}
             smooth="easeInOutQuint"
+            offset={-100}
             to="productsCL-container"
           >
             {item.pageNum}
@@ -79,10 +83,11 @@ function ProductsPagination({ amountSlides, changeSlide, currentSlide }: IProduc
 
       {currentSlideIndex !== pageNumbers[pageNumbers.length - 1].pageNum - 1 ? (
         <Link
-          className="productsPagination__item"
+          className={styles["pagination-item"]}
           onClick={() => changeSlide(currentSlideIndex + 2)}
           duration={1000}
           smooth="easeInOutQuint"
+          offset={-100}
           to="productsCL-container"
         >
           <ArrowRight />

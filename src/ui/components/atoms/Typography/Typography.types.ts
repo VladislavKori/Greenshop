@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export type TypographyVariants = "h1" | "h2" | "body";
+export type TypographyVariants = "h1" | "h2" | "h3" | "p" | "body";
 
 export type TypographyColors = "black" | "gray" | "primary";
 

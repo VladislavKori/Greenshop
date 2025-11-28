@@ -1,9 +1,0 @@
-.productsCL {
-    display:  grid;
-    grid-template-columns: repeat(auto-fill, 260px);
-    column-gap: 30px;
-    row-gap: 70px;
-    list-style: none;
-    align-items: center;
-    justify-content: center;
-}

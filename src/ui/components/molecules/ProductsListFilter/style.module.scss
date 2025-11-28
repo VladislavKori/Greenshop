@@ -1,0 +1,49 @@
+.filter {
+    width: 100%;
+    background: #FBFBFB;
+    overflow: hidden;
+    height: max-content;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    &-section {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &-list {
+        list-style: none;
+        margin: 10px 0;
+        padding-left: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &-button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background: none;
+        padding: 8px 0;
+        cursor: pointer;
+        border: none;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .productsListFilter {
+        max-width: 290px;
+    }
+}
+
+
+@media screen and (max-width: 950px) {
+    .productsListFilter {
+        display: none;
+    }
+}
